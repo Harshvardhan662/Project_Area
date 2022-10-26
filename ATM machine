@@ -1,0 +1,51 @@
+import java.util.Scanner;
+public class ATM {
+    public static void main(String[] args) {
+
+
+        Scanner n = new Scanner(System.in);
+        System.out.println("wellcome");
+        int belance = 10000;
+        
+        /*  custmize your balence */
+        
+        int withdraw,deposit;
+        int i = 1;
+        while (i<=10) {
+        System.out.println("choose 1 for withdraw");
+        System.out.println("choose 2 for deposit");
+        System.out.println("choose 3 for check belance");
+        int x = n.nextInt();
+
+           switch (x) {
+               case 1:
+                   System.out.println("enter the amount to withdraw :-- ");
+                   int a = n.nextInt();
+
+                   if (belance >= a) {
+                       int c = belance - a;
+                       System.out.println("pleas take your chas ");
+                       System.out.println("avilable belance :- " + c);
+                   } else {
+                       System.out.println("error");
+                   }
+                   break;
+               case 2:
+                   System.out.println("enter the amount to deposit :-- ");
+                   int d = n.nextInt();
+                   int c = belance + d;
+                   System.out.println("your amount is deposit");
+                   System.out.println("Total balence is :--" + c);
+
+                   break;
+               case 3:
+                   System.out.println(+belance);
+                   break;
+
+               default:
+                   System.out.println("error");
+                   break;
+           }
+    }
+    }
+}
